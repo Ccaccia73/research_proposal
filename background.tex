@@ -2,9 +2,9 @@
 
 Fluid-structure interacion (FSI) describes how a moving or deformable object behaves in contact with a fluid, surrounding or internal. It is present in various forms both in nature and in man-made systems \cite{ZIENKIEWICZ2014423}.
 
-The numerical methods used to simulate FSI problems may be roughly classified into two classes: the \textit{monolithic approach} and the \textit{partitioned approach}, basically considering how many solvers are used to find a solution.
+The numerical methods used to simulate FSI problems may be roughly classified into two classes: the \textit{monolithic approach} and the \textit{partitioned approach}, depending on how many solvers are used to find a solution.
 
-In the \textit{monolithic approach}, the whole problem is treated as a unique entity and solved simultaneously with a specialized ad hoc solver. The fluid and structure form a single system of equations for the entire problem, which is solved simultaneously by a unified algorithm. The interface conditions are implicit in the solution procedure \cite{hubner2004monolithic}, \cite{ryzhakov2010monolithic}.
+In the \textit{monolithic approach}, the whole problem is treated as a unique entity and solved simultaneously with a specialized ad hoc solver. Fluid and structure form a single system of equations for the entire problem, which is solved simultaneously by a unified algorithm. The interface conditions are implicit in the solution procedure \cite{hubner2004monolithic}, \cite{ryzhakov2010monolithic}.
 
 Despite achieving better accuracy, as it solves the system of equations exactly and the interface conditions are implicit in the model \cite{richter2017fluid}, it may require more resources and expertise to develop a specialized code that can be cumbersome to maintain.
 
