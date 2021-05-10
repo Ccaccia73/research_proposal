@@ -1,0 +1,20 @@
+\subsection*{State of the Art}
+
+Fluid-structure interacion (FSI) describes how a moving or deformable object behaves in contact with a fluid, surrounding or internal. It is present in various forms both in nature and in man-made systems \cite{ZIENKIEWICZ2014423}.
+
+The numerical methods used to simulate FSI problems may be roughly classified into two classes: the \textit{monolithic approach} and the \textit{partitioned approach}, basically considering how many solvers are used to find a solution.
+
+In the \textit{monolithic approach}, the whole problem is treated as a unique entity and solved simultaneously with a specialized ad hoc solver. The fluid and structure form a single system of equations for the entire problem, which is solved simultaneously by a unified algorithm. The interface conditions are implicit in the solution procedure \cite{hubner2004monolithic}, \cite{ryzhakov2010monolithic}.
+
+Despite achieving better accuracy, as it solves the system of equations exactly and the interface conditions are implicit in the model \cite{richter2017fluid}, it may require more resources and expertise to develop a specialized code that can be cumbersome to maintain.
+
+In the \textit{partitioned approach}, the fluid and the solid domains are treated as two distinct computational fields, that have to be solved separately. The interface conditions are used to communicate information between fluid and structure\cite{degroote2009performance}. This approach thus requires a third software module (i.e. a coupling algorithm) to incorporate the interaction aspects. Finally, fluid and structural solutions together yield the FSI solution.
+
+A big advantage of this approach is that software modularity is preserved: different and efficient solution techniques can be used for the flow equations and structural equations. Provided that they can exchange data, existing well-validated solvers for the fluid and solid problem can be adapted.
+
+Besides, compared to monolithic procedures, the programming efforts are lower for partitioned approaches, as only the coupling of the existing solvers has to be implemented rather than the solvers themselves.
+
+For the reasons above partitioned methods gain increasing importance in solving FSI problems. 
+
+Specific software components, like the library preCICE \cite{bungartz2016precice} are specifically built to take care of the coupling between the solvers, steering the simulation of each participant and defining the coupling strategy (\cite{hou2012numerical}, \cite{degroote2009performance}, \cite{mehl2016parallel}). 
+
