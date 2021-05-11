@@ -13,9 +13,7 @@ An \textit{adapter} to connect MBDyn and preCICE has been developed in \cite{cac
 
 This proposal stems from the work presented in \cite{caccia2020master} and \cite{caccia2021coupling}, with the purpose of extending the current capabilities of the set-up and the variety of problems to be solved.
 
-The idea is to develop and validate a complete framework to be used to perform FSI simulations adopting multi-body dynamics for the structural part, exploiting the current MBDyn capabilities and developing new ones.
-
-\hl{cmq diamo focus a CFD}
+The idea is to develop and validate a complete framework to be used to perform FSI simulations adopting multi-body dynamics for the structural part. The connection to the library preCICE has the twofold advantage of using state of the art coupling algorithms (\cite{mehl2016parallel}, \cite{bungartz2016precice}, \cite{degroote2009performance}) and state of the art CFD solvers \cite{uekermann2017official} (e.g.\ \textit{OpenFOAM} or \textit{SU2}).
 
 The number of appli
 
@@ -25,6 +23,17 @@ The number of appli
 - also rigid body dynamics + control loop (transitory simulation of hydraulic valve)
 - foil
 - solid solid 
+
+
+mid fidelity DUST \cite{cocco2020simulation}
+
+the standardized coupling interface would allow to use the best solver for the specific design phase 
+
+rotor \cite{quaranta2004toward}  \cite{cavagna2009simulation}  \cite{masarati2011coupled}
+
+wind turbines \cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid} 
+
+
 
 
 
