@@ -990,7 +990,7 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
 @Article{waitman2020h,
   author    = {Waitman, S{\'e}rgio and Marcos, Andr{\'e}s},
   journal   = {Journal of Guidance, Control, and Dynamics},
-  title     = {H∞ Control Design for Active Flutter Suppression of Flexible-Wing Unmanned Aerial Vehicle Demonstrator},
+  title     = {$H_{\infty}$ Control Design for Active Flutter Suppression of Flexible-Wing Unmanned Aerial Vehicle Demonstrator},
   year      = {2020},
   number    = {4},
   pages     = {656--672},
@@ -1054,6 +1054,15 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
   number    = {1},
   volume    = {139},
   publisher = {American Society of Mechanical Engineers Digital Collection},
+}
+
+@Article{semeraro2021digital,
+  author  = {Semeraro, Concetta and Lezoche, Mario and Panetto, Herv{\'e} and Dassisti, Michele},
+  journal = {Computers in Industry},
+  title   = {Digital Twin Paradigm: A Systematic Literature Review},
+  year    = {2021},
+  pages   = {103469},
+  volume  = {130},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
