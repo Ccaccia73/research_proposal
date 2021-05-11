@@ -1046,4 +1046,14 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
   publisher = {Elsevier},
 }
 
+@Article{frosina2017modeling,
+  author    = {Frosina, Emma and Senatore, Adolfo and Buono, Dario and Stelson, Kim A},
+  journal   = {Journal of Fluids Engineering},
+  title     = {A modeling approach to study the fluid-dynamic forces acting on the spool of a flow control valve},
+  year      = {2017},
+  number    = {1},
+  volume    = {139},
+  publisher = {American Society of Mechanical Engineers Digital Collection},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
