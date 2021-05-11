@@ -3,10 +3,35 @@
 
 \subsubsection*{Background}
 
-Focusing on the structural part of the co-simulation, coupled general purpose FEM codes allow to solve a wide range of problems. Nevertheless, even with today's computers and using finite elements techniques, it is not always feasible or convenient to treat a solid as a 3D continuum. Bodies with particular geometric features can be seen as lower dimension ones, with respect to the governing equations \cite{hjelmstad2007fundamentals} (e.g.\ \textit{beams}, \textit{plates} or \textit{shells}).
+Focusing on the structural part of the co-simulation, general purpose FEM codes allow to solve a wide range of problems. Nevertheless, even with today's computers and using finite elements techniques, it is not always feasible or convenient to treat a solid as a 3D continuum. Bodies with particular geometric features can be seen as lower dimension ones, with respect to the governing equations \cite{hjelmstad2007fundamentals} (e.g.\ \textit{beams}, \textit{plates} or \textit{shells}).
 
-MBDyn is a free general-purpose Multibody Dynamics solver which models the constrained nonlinear dynamics of rigid and flexible bodies formulated as sets of Differential-Algebraic Equations (DAEs) \cite{masarati2014efficient}. It models slender deformable components using an original, geometrically exact finite volume formulation for beam elements with a high level of flexibility \cite{ghiringhelli2000multibody,bauchau2016validation}. MBDyn is also able to exchange kinematics and load information with a cloud of external points of arbitrary topology \cite{quaranta2005conservative}.
+MBDyn is a free general-purpose Multibody Dynamics solver which models the constrained nonlinear dynamics of rigid and flexible bodies formulated as sets of Differential-Algebraic Equations (DAEs) \cite{masarati2014efficient}. It models slender deformable components using an original, geometrically exact finite volume formulation for beam elements with a high level of flexibility \cite{ghiringhelli2000multibody,bauchau2016validation}. MBDyn is also able to exchange kinematics and load information with a cloud of external points of arbitrary topology \cite{quaranta2005conservative} and so is open to be connected to external software to perform partitioned FSI simulations.
 
+An \textit{adapter} to connect MBDyn and preCICE has been developed in \cite{caccia2020master}, and it has been validated (\cite{caccia2021coupling}, submitted for publication) though a set of well-known benchmarks composed of a laminar incompressible flow around a slender elastic object (\cite{ramm1998fluid}, \cite{turek2006proposal}, \cite{turek2010numerical}).
+
+\subsubsection*{Goal}
+
+This proposal stems from the work presented in \cite{caccia2020master} and \cite{caccia2021coupling}, with the purpose of extending the current capabilities of the set-up and the variety of problems to be solved.
+
+The idea is to develop and validate a complete framework to be used to perform FSI simulations adopting multi-body dynamics for the structural part. The connection to the library preCICE has the twofold advantage of using state of the art coupling algorithms (\cite{mehl2016parallel}, \cite{bungartz2016precice}, \cite{degroote2009performance}) and state of the art CFD solvers \cite{uekermann2017official} (e.g.\ \textit{OpenFOAM} or \textit{SU2}).
+
+The number of appli
+
+
+- flexible wind turbines
+- flexible wings (dreamliner to X56A)
+- also rigid body dynamics + control loop (transitory simulation of hydraulic valve)
+- foil
+- solid solid 
+
+
+mid fidelity DUST \cite{cocco2020simulation}
+
+the standardized coupling interface would allow to use the best solver for the specific design phase 
+
+rotor \cite{quaranta2004toward}  \cite{cavagna2009simulation}  \cite{masarati2011coupled}
+
+wind turbines \cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid} 
 
 
 
@@ -15,28 +40,11 @@ MBDyn is a free general-purpose Multibody Dynamics solver which models the const
 \noindent\rule{\textwidth}{1pt}
 
 
-The beam model can be used to build elements of a FEM. For example, the beam element can be modeled by means of a Finite Volume approach, as described in \cite{ghiringhelli2000multibody}, which computes the internal forces as functions of the straining of the reference line and orientation at selected points along the line itself, called evaluation points.
-
-along with a form of mapping between the interface (wet surface) and the structural model, especially when the two are topologically incompatible, in order to exchange the mutual kinematics and dynamics \cite{quaranta2005conservative}.
 
 
 
 
 
-
-This approach is particularly interesting for FSI problems in which slender structures are involved. A mapping is needed between the fluid-solid interface and the reference line movement, which will be described in Sections \ref{sec:mbd-beam} and \ref{sec:mbd-forces}.
-
-
-
-
-
-
-
-
-
-\subsubsection*{Goal}
-
-This proposal stems from the \cite{caccia2021coupling}
 
 
 Implicit methods are generally applicable to any kind of FSI problems, in contrast with explicit methods. When fluid and structure are strongly coupled, explicit coupling can be subject to numerical instabilities, a problem that cannot always be solved by reducing the coupling time step size \cite{van2009added}. These instabilities can be overcome by implicit methods, even if several coupling iterations may be executed every time step, until the values on both sides of the interface converge.
@@ -59,15 +67,3 @@ Framework to perfom fsi with multi-body
 
 
 ultimate task: digital twin
-
-
-
-
-
-
-The \textit{beam} model splits the description of the geometry into two sub-problems:
-\begin{enumerate}
-	\item a beam is defined by its \textit{reference line} and the movement (displacement and rotation) of the solid is completely defined by it (see Figure \ref{fig:beam-model}),
-	\item the beam \textit{cross section} is considered as a whole, its movement depends on the movement of the reference line, stresses are generalized into \textit{resultants} (axial, bending, shear, torsional) which represent the aggregate effect of all of the stresses acting on the cross section. The constitutive properties of the section (axial, shear, torsion and bending stiffness) allow to relate stresses and deformations (by means of VWP) and close the problem.
-\end{enumerate}
-
