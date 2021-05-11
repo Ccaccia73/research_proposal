@@ -948,7 +948,15 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
   publisher = {Elsevier},
 }
 
-@Article{,
+@Article{lupu2018absolute,
+  author    = {Lupu, Mircea and Constantinescu, Cristian-George and Radu, Gheorghe},
+  journal   = {INCAS Bulletin},
+  title     = {The absolute stabilization and optimal control of hydrofoil watercrafts},
+  year      = {2018},
+  number    = {4},
+  pages     = {85--96},
+  volume    = {10},
+  publisher = {INCAS-National Institute for Aerospace Research" Elie Carafoli"},
 }
 
 @Article{guerri2008fluid,
@@ -960,6 +968,82 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
   pages     = {539--557},
   volume    = {32},
   publisher = {SAGE Publications Sage UK: London, England},
+}
+
+@InProceedings{bousquet2017control,
+  author       = {Bousquet, Gabriel D and Triantafyllou, Michael S and Slotine, Jean-Jacques E},
+  booktitle    = {2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  title        = {Control of a flexible, surface-piercing hydrofoil for high-speed, small-scale applications},
+  year         = {2017},
+  organization = {IEEE},
+  pages        = {4203--4208},
+}
+
+@InProceedings{pusch2019aeroelastic,
+  author    = {Pusch, Manuel and Ossmann, Daniel and Dillinger, Johannes and Kier, Thiemo M and Tang, Martin and L{\"u}bker, Jannis},
+  booktitle = {AIAA scitech 2019 forum},
+  title     = {Aeroelastic modeling and control of an experimental flexible wing},
+  year      = {2019},
+  pages     = {0131},
+}
+
+@Article{waitman2020h,
+  author    = {Waitman, S{\'e}rgio and Marcos, Andr{\'e}s},
+  journal   = {Journal of Guidance, Control, and Dynamics},
+  title     = {H∞ Control Design for Active Flutter Suppression of Flexible-Wing Unmanned Aerial Vehicle Demonstrator},
+  year      = {2020},
+  number    = {4},
+  pages     = {656--672},
+  volume    = {43},
+  publisher = {American Institute of Aeronautics and Astronautics},
+}
+
+@Article{chanzy2018analysis,
+  author    = {Chanzy, Q and Keane, AJ},
+  journal   = {The Aeronautical Journal},
+  title     = {Analysis and experimental validation of morphing UAV wings},
+  year      = {2018},
+  number    = {1249},
+  pages     = {390--408},
+  volume    = {122},
+  publisher = {Cambridge University Press},
+}
+
+@Article{li2018review,
+  author    = {Li, Daochun and Zhao, Shiwei and Da Ronch, Andrea and Xiang, Jinwu and Drofelnik, Jernej and Li, Yongchao and Zhang, Lu and Wu, Yining and Kintscher, Markus and Monner, Hans Peter and others},
+  journal   = {Progress in Aerospace Sciences},
+  title     = {A review of modelling and analysis of morphing wings},
+  year      = {2018},
+  pages     = {46--62},
+  volume    = {100},
+  publisher = {Elsevier},
+}
+
+@Article{cumnuantip2018assessment,
+  author = {Cumnuantip, Sunpeth and Kr{\"u}ger, Wolf R},
+  title  = {Assessment of Dynamic Landing Loads by a Hybrid Multibody/Full Finite Element Simulation Approach},
+  year   = {2018},
+}
+
+@Article{amirante2006flow,
+  author    = {Amirante, Riccardo and Del Vescovo, Giuseppe and Lippolis, Antonio},
+  journal   = {Energy Conversion and Management},
+  title     = {Flow forces analysis of an open center hydraulic directional control valve sliding spool},
+  year      = {2006},
+  number    = {1},
+  pages     = {114--131},
+  volume    = {47},
+  publisher = {Elsevier},
+}
+
+@Article{lisowski2013three,
+  author    = {Lisowski, Edward and Czy{\.z}ycki, W and Rajda, Janusz},
+  journal   = {Energy Conversion and Management},
+  title     = {Three dimensional CFD analysis and experimental test of flow force acting on the spool of solenoid operated directional control valve},
+  year      = {2013},
+  pages     = {220--229},
+  volume    = {70},
+  publisher = {Elsevier},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
