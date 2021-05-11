@@ -905,4 +905,61 @@ abstract = {This chapter provides a brief introduction to the vast area of fluid
   year   = {2020},
 }
 
+@Article{quaranta2004toward,
+  author = {Quaranta, Giuseppe and Bindolino, Giampiero and Masarati, Pierangelo and Mantegazza, Paolo},
+  title  = {Toward a computational framework for rotorcraft multi-physics analysis: Adding computational aerodynamics to multibody rotor models},
+  year   = {2004},
+}
+
+@Article{cavagna2009simulation,
+  author    = {Cavagna, Luca and Masarati, Pierangelo and Quaranta, Giuseppe},
+  journal   = {Multibody Dynamic},
+  title     = {Simulation of maneuvering flexible aircraft by coupled multibody/CFD},
+  year      = {2009},
+  publisher = {Citeseer},
+}
+
+@InProceedings{masarati2011coupled,
+  author    = {Masarati, Pierangelo and Sitaraman, Jayanarayanan},
+  booktitle = {49th AIAA Aerospace Sciences Meeting including the New Horizons Forum and Aerospace Exposition},
+  title     = {Coupled cfd/multibody analysis of nrel unsteady aerodynamic experiment phase vi rotor},
+  year      = {2011},
+  pages     = {153},
+}
+
+@Article{roul2020fluid,
+  author    = {Roul, Rajendra and Kumar, Awadhesh},
+  journal   = {Symmetry},
+  title     = {Fluid-Structure Interaction of Wind Turbine Blade Using Four Different Materials: Numerical Investigation},
+  year      = {2020},
+  number    = {9},
+  pages     = {1467},
+  volume    = {12},
+  publisher = {Multidisciplinary Digital Publishing Institute},
+}
+
+@Article{rasheed2014comprehensive,
+  author    = {Rasheed, Adil and Holdahl, Runar and Kvamsdal, Trond and {\AA}kervik, Espen},
+  journal   = {Energy Procedia},
+  title     = {A comprehensive simulation methodology for fluid-structure interaction of offshore wind turbines},
+  year      = {2014},
+  pages     = {135--145},
+  volume    = {53},
+  publisher = {Elsevier},
+}
+
+@Article{,
+}
+
+@Article{guerri2008fluid,
+  author    = {Guerri, Ouahiba and Hamdouni, Aziz and Sakout, Anas},
+  journal   = {Wind Engineering},
+  title     = {Fluid structure interaction of wind turbine airfoils},
+  year      = {2008},
+  number    = {6},
+  pages     = {539--557},
+  volume    = {32},
+  publisher = {SAGE Publications Sage UK: London, England},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
