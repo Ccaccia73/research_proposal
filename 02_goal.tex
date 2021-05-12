@@ -15,7 +15,13 @@ This proposal stems from the work presented in \cite{caccia2020master} and \cite
 
 The idea is to develop and validate a complete framework to be used to perform FSI simulations adopting multi-body dynamics for the structural part. The connection to the library preCICE has the twofold advantage of using state of the art coupling algorithms (\cite{mehl2016parallel}, \cite{bungartz2016precice}, \cite{degroote2009performance}) and state of the art CFD solvers \cite{uekermann2017official} (e.g.\ \textit{OpenFOAM} or \textit{SU2}).
 
-The number of appli
+The number of applications benefiting of this framework would be vast, just to name a few:
+
+\begin{itemize}
+    \item Rotorcraft integrated dynamics analysis is a difficult task \cite{quaranta2004toward},  but the standardized coupling interface would allow to use the best solver for the specific design phase, from mid fidelity solvers \cite{cocco2020simulation} to full CFD when needed (e.g.\ \cite{cavagna2009simulation}  \cite{masarati2011coupled}).
+    \item Flexible wings are a growing research topic (\cite{pusch2019aeroelastic}, \cite{waitman2020h}): complex wing sections can be described by the MBDyn beam model
+    \item wind turbines \cite{}
+\end{itemize}
 
 
 - flexible wind turbines
@@ -27,13 +33,7 @@ The number of appli
 
 
 
-the standardized coupling interface would allow to use the best solver for the specific design phase 
-
-rotor \cite{quaranta2004toward}  \cite{cavagna2009simulation}  \cite{masarati2011coupled} mid fidelity DUST \cite{cocco2020simulation}
-
-flexible wings \cite{pusch2019aeroelastic}, \cite{waitman2020h}
-
-wind turbines \cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid} 
+ \cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid} 
 
 hydrofoil \cite{lupu2018absolute}, \cite{bousquet2017control}
 
@@ -46,24 +46,6 @@ solid solid interaction or hybrid full finite element \cite{cumnuantip2018assess
 
 
 ultimate task: digital twin \cite{semeraro2021digital}
-
-
-\noindent\rule{\textwidth}{1pt}
-
-
-
-
-
-
-
-
-
-Implicit methods are generally applicable to any kind of FSI problems, in contrast with explicit methods. When fluid and structure are strongly coupled, explicit coupling can be subject to numerical instabilities, a problem that cannot always be solved by reducing the coupling time step size \cite{van2009added}. These instabilities can be overcome by implicit methods, even if several coupling iterations may be executed every time step, until the values on both sides of the interface converge.
-
-The only constraint is that node movements should not distort the mesh too much as this leads to computational inaccuracy. Many algorithms exist to implement suitable quality criteria and keep the mesh motion reasonable and to allow the nodes to follow moving particles up to a certain extent \cite{de2007mesh}.
-
-Fluid mesh nodes follow the fluid particles sticking to the interface (for viscous flows), while the rest of the fluid mesh is allowed to move in such way that mesh distortions are kept minimal, to preserve computational accuracy \cite{ramm1998fluid}.
-
 
 
 
