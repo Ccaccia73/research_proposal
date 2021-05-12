@@ -3,7 +3,7 @@
 
 \subsubsection*{Background}
 
-Focusing on the structural part of the co-simulation, general purpose FEM codes allow to solve a wide range of problems. Nevertheless, even with today's computers and using finite elements techniques, it is not always feasible or convenient to treat a solid as a 3D continuum. Bodies with particular geometric features can be seen as lower dimension ones, with respect to the governing equations \cite{hjelmstad2007fundamentals} (e.g.\ \textit{beams}, \textit{plates} or \textit{shells}).
+Focusing on the structural part of the co-simulation, general purpose FEM codes allow to solve a wide range of problems. Nevertheless, it is not always feasible or convenient to treat a solid as a 3D continuum. Bodies with particular geometric features can be seen as lower dimension ones, with respect to the governing equations \cite{hjelmstad2007fundamentals} (e.g.\ \textit{beams}, \textit{plates} or \textit{shells}).
 
 MBDyn is a free general-purpose Multibody Dynamics solver which models the constrained nonlinear dynamics of rigid and flexible bodies formulated as sets of Differential-Algebraic Equations (DAEs) \cite{masarati2014efficient}. It models slender deformable components using an original, geometrically exact finite volume formulation for beam elements with a high level of flexibility \cite{ghiringhelli2000multibody,bauchau2016validation}. MBDyn is also able to exchange kinematics and load information with a cloud of external points of arbitrary topology \cite{quaranta2005conservative} and so is open to be connected to external software to perform partitioned FSI simulations.
 
@@ -18,34 +18,11 @@ The idea is to develop and validate a complete framework to be used to perform F
 The number of applications benefiting of this framework would be vast, just to name a few:
 
 \begin{itemize}
-    \item Rotorcraft integrated dynamics analysis is a difficult task \cite{quaranta2004toward},  but the standardized coupling interface would allow to use the best solver for the specific design phase, from mid fidelity solvers \cite{cocco2020simulation} to full CFD when needed (e.g.\ \cite{cavagna2009simulation}  \cite{masarati2011coupled}).
-    \item Flexible wings are a growing research topic (\cite{pusch2019aeroelastic}, \cite{waitman2020h}): complex wing sections can be described by the MBDyn beam model
-    \item wind turbines \cite{}
+    \item Rotorcraft dynamics analysis task \cite{quaranta2004toward}: the standardized coupling interface allows to use the best solver for the specific design phase, from mid fidelity solvers \cite{cocco2020simulation} to full CFD when needed (e.g.\ \cite{cavagna2009simulation}  \cite{masarati2011coupled}).
+    \item Flexible wings are a growing research topic (\cite{pusch2019aeroelastic}, \cite{waitman2020h}) and complex wing sections can be modeled within MBDyn.
+    \item AMI\footnote{Arbitrary Mesh Interface} or MRF\footnote{Multiple Reference Frame} techniques can be used in the FSI simulation also to simulate wind turbines (\cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid}). Besides, pitch control (\cite{baburajan2017pitch}) could be studied adding a controller to the multibody model.
+    \item The combination of FSI and a control subsystem can simulate hydrofoil flight control (\cite{lupu2018absolute}, \cite{bousquet2017control}).
+    \item Without the need of flexible elements, valve dynamics (\cite{amirante2006flow}, \cite{lisowski2013three}, \cite{frosina2017modeling}) can also be modeled within this framework.
+    \item Adding a new layer between the fluid-solid coupling interface and the multi-body dynamics, also shape morphing can be studied (\cite{chanzy2018analysis}, \cite{li2018review}).
+    \item Finally, with some modifications to MBDyn and the current adapter, it is also possible to build hybrid multi-body full finite element models \cite{cumnuantip2018assessment}
 \end{itemize}
-
-
-- flexible wind turbines
-- flexible wings (dreamliner to X56A)
-- also rigid body dynamics + control loop (transitory simulation of hydraulic valve)
-- foil
-- solid solid 
-
-
-
-
- \cite{guerri2008fluid}, \cite{rasheed2014comprehensive}, \cite{roul2020fluid} 
-
-hydrofoil \cite{lupu2018absolute}, \cite{bousquet2017control}
-
-morphing \cite{chanzy2018analysis}, \cite{li2018review}
-
-valve dynamics \cite{amirante2006flow}, \cite{lisowski2013three}, \cite{frosina2017modeling}
-
-solid solid interaction or hybrid full finite element \cite{cumnuantip2018assessment}
-
-
-
-ultimate task: digital twin \cite{semeraro2021digital}
-
-
-
