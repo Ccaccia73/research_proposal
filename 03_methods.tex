@@ -1,4 +1,19 @@
 
+\subsection*{Methods}
+
+
+validation experimental \cite{heathcote2008effect}
+
+steps
+- verification of coupling step (added mass \cite{van2009added})
+- completion of integration
+
+- mesh deformation? \cite{de2007mesh}
+
+
+- inverse kin rbe2 rbe3 for SSI
+
+
 \noindent\rule{\textwidth}{1pt}
 
 
@@ -9,9 +24,10 @@
 
 
 
-Implicit methods are generally applicable to any kind of FSI problems, in contrast with explicit methods. When fluid and structure are strongly coupled, explicit coupling can be subject to numerical instabilities, a problem that cannot always be solved by reducing the coupling time step size \cite{van2009added}. These instabilities can be overcome by implicit methods, even if several coupling iterations may be executed every time step, until the values on both sides of the interface converge.
 
-The only constraint is that node movements should not distort the mesh too much as this leads to computational inaccuracy. Many algorithms exist to implement suitable quality criteria and keep the mesh motion reasonable and to allow the nodes to follow moving particles up to a certain extent \cite{de2007mesh}.
+Implicit methods are generally applicable to any kind of FSI problems, in contrast with explicit methods. When fluid and structure are strongly coupled, explicit coupling can be subject to numerical instabilities, a problem that cannot always be solved by reducing the coupling time step size . These instabilities can be overcome by implicit methods, even if several coupling iterations may be executed every time step, until the values on both sides of the interface converge.
+
+The only constraint is that node movements should not distort the mesh too much as this leads to computational inaccuracy. Many algorithms exist to implement suitable quality criteria and keep the mesh motion reasonable and to allow the nodes to follow moving particles up to a certain extent .
 
 Fluid mesh nodes follow the fluid particles sticking to the interface (for viscous flows), while the rest of the fluid mesh is allowed to move in such way that mesh distortions are kept minimal, to preserve computational accuracy \cite{ramm1998fluid}.
 

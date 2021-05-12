@@ -5,15 +5,15 @@
 
 Focusing on the structural part of the co-simulation, general purpose FEM codes allow to solve a wide range of problems. Nevertheless, it is not always feasible or convenient to treat a solid as a 3D continuum. Bodies with particular geometric features can be seen as lower dimension ones, with respect to the governing equations \cite{hjelmstad2007fundamentals} (e.g.\ \textit{beams}, \textit{plates} or \textit{shells}).
 
-MBDyn is a free general-purpose Multibody Dynamics solver which models the constrained nonlinear dynamics of rigid and flexible bodies formulated as sets of Differential-Algebraic Equations (DAEs) \cite{masarati2014efficient}. It models slender deformable components using an original, geometrically exact finite volume formulation for beam elements with a high level of flexibility \cite{ghiringhelli2000multibody,bauchau2016validation}. MBDyn is also able to exchange kinematics and load information with a cloud of external points of arbitrary topology \cite{quaranta2005conservative} and so is open to be connected to external software to perform partitioned FSI simulations.
+MBDyn is a Multibody Dynamics solver which models the constrained nonlinear dynamics of rigid and flexible bodies \cite{masarati2014efficient}. It models slender deformable components using an original, geometrically exact finite volume formulation for beam elements with a high level of flexibility \cite{ghiringhelli2000multibody,bauchau2016validation}. MBDyn is also able to exchange kinematics and load information with a cloud of external points of arbitrary topology \cite{quaranta2005conservative} and so is open to be connected to external software to perform partitioned FSI simulations.
 
-An \textit{adapter} to connect MBDyn and preCICE has been developed in \cite{caccia2020master}, and it has been validated (\cite{caccia2021coupling}, submitted for publication) though a set of well-known benchmarks composed of a laminar incompressible flow around a slender elastic object (\cite{ramm1998fluid}, \cite{turek2006proposal}, \cite{turek2010numerical}).
+An \textit{adapter} to connect MBDyn and preCICE has been developed in \cite{caccia2020master}, and it has been validated (\cite{caccia2021coupling}, submitted for publication) through a set of well-known benchmarks composed of a laminar incompressible flow around a slender elastic object (\cite{ramm1998fluid}, \cite{turek2006proposal}, \cite{turek2010numerical}).
 
 \subsubsection*{Goal}
 
 This proposal stems from the work presented in \cite{caccia2020master} and \cite{caccia2021coupling}, with the purpose of extending the current capabilities of the set-up and the variety of problems to be solved.
 
-The idea is to develop and validate a complete framework to be used to perform FSI simulations adopting multi-body dynamics for the structural part. The connection to the library preCICE has the twofold advantage of using state of the art coupling algorithms (\cite{mehl2016parallel}, \cite{bungartz2016precice}, \cite{degroote2009performance}) and state of the art CFD solvers \cite{uekermann2017official} (e.g.\ \textit{OpenFOAM} or \textit{SU2}).
+The idea is to develop and validate a complete framework to be used to perform FSI (and possibly other) simulations adopting multi-body dynamics for the structural part. The connection to the library preCICE has the twofold advantage of using state of the art coupling algorithms (\cite{mehl2016parallel}, \cite{bungartz2016precice}, \cite{degroote2009performance}) and state of the art CFD solvers \cite{uekermann2017official} (e.g.\ \textit{OpenFOAM} or \textit{SU2}).
 
 The number of applications benefiting of this framework would be vast, just to name a few:
 
